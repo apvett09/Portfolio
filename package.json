@@ -7,7 +7,7 @@
   "scripts": {
     "start": "parcel",
     "build": "parcel build",
-    "gh-pages-build": "parcel build --public-url ."
+    "gh-pages-build": "parcel build src/index.html --public-url ."
   },
   "repository": {
     "type": "git",
