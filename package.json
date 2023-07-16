@@ -11,17 +11,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cobidev/simplefolio"
+    "url": "git+https://github.com/apvett09/Portfolio"
   },
   "keywords": [],
-  "author": "Jacobo Martinez",
+  "author": "Anthony Vettraino",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/cobidev/simplefolio/issues"
+    "url": "https://github.com/apvett09/Portfolio/issues"
   },
-  "homepage": "https://github.com/cobidev/simplefolio#readme",
+  "homepage": "https://github.com/apvett09/Portfolio#readme",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.7.0",
+    "gh-pages": "^5.0.0",
     "parcel": "^2.7.0",
     "prettier": "^2.7.1"
   },
