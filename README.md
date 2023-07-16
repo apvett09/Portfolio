@@ -1,5 +1,4 @@
-# Personal Porfolio ⚡️ 
-
+# Personal Porfolio
 
 ## Features
 
