@@ -37,6 +37,37 @@
 
     <!-- Todo: remove the below script once you finish your portfolio -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <link rel="stylesheet" type="text/css" href="/src/glider.css" />
+    <style>
+      /* Custom styles for carousel */
+      .glider-container {
+        margin: 0;
+        position: relative;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+      }
+      .glider-slide img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .glider-prev,
+      .glider-next {
+        background-color: rgba(0, 0, 0, 0.5);
+        border: none;
+        color: rgb(250, 250, 250);
+        padding: 1rem;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      /* .glider-prev {
+        left: 10px;
+      }
+      .glider-next {
+        right: 10px;
+      } */
+    </style>
   </head>
 
   <!-- Todo: read the following HTML Todos to create your stunning portfolio website -->
@@ -116,7 +147,7 @@
                   rel="noreferrer"
                   target="_blank"
                   class="cta-btn cta-btn--resume"
-                  href="assets/AVettrainoResume.pdf"
+                  href="assets/AnthonyVettrainoResume.pdf"
                 >
                   View Resume
                 </a>
@@ -200,30 +231,22 @@
           <div class="row">
             <div class="col-lg-4 col-sm-12">
               <div class="project-wrapper__text load-hidden">
-                <h3 class="project-wrapper__text-title">
-                  Workout/Training Mobile App
-                </h3>
+                <h3 class="project-wrapper__text-title">Fitness Mobile App</h3>
                 <div>
                   <p class="mb-4">
-                    This is a web application built with React that allows users
-                    to register, sign in, and submit image URLs for analysis.
-                    The application utilizes a server-side backend application
-                    using Express.js and a PostgreSQL database. It handles user
-                    registration, authentication, profile management, and image
-                    recognition using the Clarifai face-detection AI model. The
-                    backend and database are hosted on Heroku.
+                    This is a fitness mobile application built with React
+                    Native. I worked collaboratively on a team with three other
+                    students to develop this app to inspire positive fitness
+                    habits, accountability, and social challenges that engage
+                    users in a fun and productive way with measurable fitness
+                    gains. It handles user registration, Two-Factor
+                    Authentication, customizable workouts and calendar tracking.
+                    All UI is built with React Native reusable components.
                   </p>
                   <h4><strong>Technologies used:</strong></h4>
-                  <p>React Native, Node.js, Express, MySQL</p>
+                  <p>React Native, Node.js, CSS, Express, MySQL</p>
                 </div>
-                <a
-                  rel="noreferrer"
-                  target="_blank"
-                  class="cta-btn cta-btn--hero"
-                  href="https://apvett09.github.io/face-recognition/"
-                >
-                  See Live
-                </a>
+
                 <a
                   rel="noreferrer"
                   target="_blank"
@@ -236,21 +259,47 @@
             </div>
             <div class="col-lg-8 col-sm-12">
               <div class="project-wrapper__image load-hidden">
-                <a rel="noreferrer" href="#!" target="_blank">
-                  <div
-                    data-tilt
-                    data-tilt-max="4"
-                    data-tilt-glare="true"
-                    data-tilt-max-glare="0.5"
-                    class="thumbnail rounded js-tilt"
-                  >
-                    <img
-                      alt="Project Image"
-                      class="img-fluid"
-                      src="assets/faceRecognitionProject.jpg"
-                    />
+                <!-- <a rel="noreferrer" href="#!" target="_blank"> -->
+                <!-- <div class="thumbnail rounded"> -->
+                <!-- Carousel HTML Structure -->
+                <div class="glider-container">
+                  <button class="glider-prev">«</button>
+                  <div class="glider">
+                    <div class="test">
+                      <img src="assets/Login.jpg" alt="Screenshot 1" />
+                    </div>
+                    <div class="test">
+                      <img
+                        src="assets/WorkoutProgress1.jpg"
+                        alt="Screenshot 2"
+                      />
+                    </div>
+                    <div class="test">
+                      <img src="assets/AddExercise.jpg" alt="Screenshot 3" />
+                    </div>
+                    <div class="test">
+                      <img
+                        src="assets/ExerciseWalkthrough.jpg"
+                        alt="Screenshot 3"
+                      />
+                    </div>
+                    <div class="test">
+                      <img
+                        src="assets/PostWorkoutSummary.jpg"
+                        alt="Screenshot 3"
+                      />
+                    </div>
+                    <div class="test">
+                      <img
+                        src="assets/WorkoutProgress2.jpg"
+                        alt="Screenshot 3"
+                      />
+                    </div>
                   </div>
-                </a>
+                  <button class="glider-next">»</button>
+                </div>
+                <!-- </div> -->
+                <!-- </a> -->
               </div>
             </div>
           </div>
@@ -309,7 +358,7 @@
         <!-- Notice: if you want to give me some credit, it will be huge for me! if not, put your data on it -->
         <p class="footer__text">
           © 2023 - Developed by
-          <a rel="noreferrer" href="https://github.com/cobidev" target="_blank"
+          <a rel="noreferrer" href="https://github.com/apvett09" target="_blank"
             >Anthony Vettraino</a
           >
         </p>
@@ -318,5 +367,24 @@
     <!-- /END Footer Section -->
 
     <script defer type="module" src="index.js"></script>
+
+    <!-- Glider.js JavaScript -->
+    <script src="./scripts/glider.js"></script>
+    <script>
+      // Initialize Glider.js after window load
+      window.addEventListener("load", function () {
+        new Glider(document.querySelector(".glider"), {
+          // Glider.js settings
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          draggable: true,
+          dots: "#dots",
+          arrows: {
+            prev: ".glider-prev",
+            next: ".glider-next",
+          },
+        });
+      });
+    </script>
   </body>
 </html>
