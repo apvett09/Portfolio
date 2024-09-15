@@ -34,9 +34,11 @@
       defer
       src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"
     ></script>
+    <!-- Glider.js JavaScript -->
+    <script src="./scripts/glider.js"></script>
 
     <!-- Todo: remove the below script once you finish your portfolio -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <!-- <script async defer src="https://buttons.github.io/buttons.js"></script>s -->
     <link rel="stylesheet" type="text/css" href="/src/glider.css" />
     <style>
       /* Custom styles for carousel */
@@ -378,7 +380,7 @@
     <section id="contact">
       <div class="container">
         <h2 class="section-title">Contact</h2>
-        <div class="contact-wrapper load-hidden">
+        <div class="contact-wrapper">
           <p class="contact-wrapper__text">
             Let's connect and bring ideas to life! Feel free to reach out to me
             using the contact information below.
@@ -404,7 +406,7 @@
         <div class="social-links">
           <a
             rel="noreferrer"
-            href="https://www.linkedin.com/in/anthony-vettraino-7bb784144/"
+            href="https://www.linkedin.com/in/anthony-vettraino/"
             target="_blank"
           >
             <i class="fa fa-linkedin fa-inverse"></i>
@@ -422,7 +424,7 @@
 
         <!-- Notice: if you want to give me some credit, it will be huge for me! if not, put your data on it -->
         <p class="footer__text">
-          © 2023 - Developed by
+          © 2024 - Developed by
           <a rel="noreferrer" href="https://github.com/apvett09" target="_blank"
             >Anthony Vettraino</a
           >
@@ -433,22 +435,25 @@
 
     <script defer type="module" src="index.js"></script>
 
-    <!-- Glider.js JavaScript -->
-    <script src="./scripts/glider.js"></script>
     <script>
       // Initialize Glider.js after window load
       window.addEventListener("load", function () {
-        new Glider(document.querySelector(".glider"), {
-          // Glider.js settings
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          draggable: true,
-          dots: "#dots",
-          arrows: {
-            prev: ".glider-prev",
-            next: ".glider-next",
-          },
-        });
+        const gliderElement = document.querySelector(".glider");
+        if (gliderElement) {
+          console.log("Glider element found:", gliderElement);
+          new Glider(gliderElement, {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            draggable: true,
+            dots: "#dots",
+            arrows: {
+              prev: ".glider-prev",
+              next: ".glider-next",
+            },
+          });
+        } else {
+          console.error("Glider element not found!");
+        }
       });
     </script>
   </body>
